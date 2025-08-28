@@ -37,11 +37,8 @@
 	flags_atom |= USES_HEARING
 
 /obj/structure/closet/Destroy()
-	GLOB.closet_list -= src
-	return ..()
-
-/obj/structure/closet/deconstruct(disassembled = TRUE)
 	dump_contents()
+	GLOB.closet_list -= src
 	return ..()
 
 /obj/structure/closet/initialize_pass_flags(datum/pass_flags_container/PF)
